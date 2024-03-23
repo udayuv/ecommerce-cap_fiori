@@ -84,7 +84,6 @@
       "css": []
     },
     "routing": {
-      "config": {},
       "routes": [
         {
           "pattern": ":?query:",
@@ -112,7 +111,8 @@
                     "route": "ProductsObjectPage"
                   }
                 }
-              }
+              },
+              "initialLoad": "Enabled"
             }
           }
         },
