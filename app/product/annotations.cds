@@ -14,18 +14,21 @@ annotate service.Products with @(
         },
         {
             $Type : 'UI.DataField',
+            Value : category.name,
+        },
+        {
+            $Type : 'UI.DataField',
             Label : '{i18n>Price}',
             Value : price,
         },
         {
             $Type : 'UI.DataField',
-            Label : '{i18n>prd_rating}',
-            Value : rating,
-        },
-        {
-            $Type : 'UI.DataField',
             Label : '{i18n>Stock}',
             Value : stock,
+        },
+        {
+            $Type : 'UI.DataFieldForAnnotation',
+            Target : '@UI.DataPoint#rating',
         },
     ]
 );
@@ -130,3 +133,10 @@ annotate service.Products with {
         },
         Common.ValueListWithFixedValues : false
 )};
+annotate service.Products with @(
+    UI.DataPoint #rating : {
+        Value : rating,
+        Visualization : #Rating,
+        TargetValue : 5,
+    }
+);
