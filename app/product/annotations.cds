@@ -1,6 +1,7 @@
 using ProcessorService as service from '../../srv/cds/productService';
 
 annotate service.Products with @(
+    odata.draft.enabled : true,
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
